@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          YouTube - Combined Script
-// @version       1.0
+// @version       1.0.0.1
 // @author        Bruno Barbieri
 // @description   Combines "Add 'Stop Download' Button (YouTube Center add-on)", "Restore Keywords" and "Hide related videos & expand comments" into a single script
 // @include       http://*.youtube.com/*watch*
@@ -119,9 +119,9 @@ function main() {
 	/* Hide related videos & expand comments - Start */
 
 	jQ('.watch-sidebar').remove();
-    jQ('.watch-content').width('100%');
-    jQ('#action-panel-details').width('96%');
-    jQ('#watch-description-clip').width('100%');
+	jQ('.watch-content').width('100%');
+	jQ('#action-panel-details').width('96%');
+	jQ('#watch-description-clip').width('100%');
 
 	/* Hide related videos & expand comments - End */
 }

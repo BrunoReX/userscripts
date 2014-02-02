@@ -35,42 +35,42 @@ function addJQuery(callback) {
 }
 
 function main() {
-	// Stolen from YousableTubeFix
-	jQ("<style type='text/css'> \
-		#stop-download-div {border-color: #E6E6E6 !important; border-style: solid !important; border-width: 0px 1px !important; padding: 15px 20px 9px !important;} \
-		#stop-download-btn {margin-right: 5px !important;} \
-		</style>").appendTo("head");
-	
-	if (jQ('#stop-download-div').length == 0) {
-		jQ('<div/>', {
-			id: 'stop-download-div'
-		}).prependTo('#watch7-content');
+    // Stolen from YousableTubeFix
+    jQ("<style type='text/css'> \
+        #stop-download-div {border-color: #E6E6E6 !important; border-style: solid !important; border-width: 0px 1px !important; padding: 15px 20px 9px !important;} \
+        #stop-download-btn {margin-right: 5px !important;} \
+        </style>").appendTo("head");
+    
+    if (jQ('#stop-download-div').length == 0) {
+        jQ('<div/>', {
+            id: 'stop-download-div'
+        }).prependTo('#watch7-content');
 
-		jQ('<button/>', {
-			id: 'stop-download-btn',
-			title: 'Stop video download',
-			type: 'button',
-			role: 'button',
-			class: 'yt-uix-button yt-uix-button-default yt-uix-tooltip yt-uix-tooltip-reverse', // Also stolen from YousableTubeFix
-			
-			click: function() {
-				jQ('#movie_player').each(function(){
-					this.pauseVideo();
-					this.stopVideo();
-				});
-				
-				jQ('#movie_player-flash').each(function(){
-					this.pauseVideo();
-					this.stopVideo();
-				});
-			}
-		}).appendTo('#stop-download-div');
-		
-		jQ('<span/>', {
-			class: 'yt-uix-button-content',
-			text: 'Stop Download'
-		}).appendTo('#stop-download-btn');
-	}
+        jQ('<button/>', {
+            id: 'stop-download-btn',
+            title: 'Stop video download',
+            type: 'button',
+            role: 'button',
+            class: 'yt-uix-button yt-uix-button-default yt-uix-tooltip yt-uix-tooltip-reverse', // Also stolen from YousableTubeFix
+            
+            click: function() {
+                jQ('#movie_player').each(function(){
+                    this.pauseVideo();
+                    this.stopVideo();
+                });
+                
+                jQ('#movie_player-flash').each(function(){
+                    this.pauseVideo();
+                    this.stopVideo();
+                });
+            }
+        }).appendTo('#stop-download-div');
+        
+        jQ('<span/>', {
+            class: 'yt-uix-button-content',
+            text: 'Stop Download'
+        }).appendTo('#stop-download-btn');
+    }
 }
 
 // Load jQuery and execute the main function

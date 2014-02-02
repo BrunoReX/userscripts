@@ -32,5 +32,5 @@ function main() {
 }
 
 window.addEventListener('load', function() {
-	addJQuery(main);
+    addJQuery(main);
 }, false);

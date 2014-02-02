@@ -38,63 +38,63 @@ function addJQuery(callback) {
 }
 
 function main() {
-	// Source: https://gist.github.com/buu700/4200601
-	jQ.fn.waitUntilExists = function (handler, shouldRunHandlerOnce, isChild) {
-		var found = 'found';
-		var jQthis = jQ(this.selector);
-		var jQelements = jQthis.not(function () {
-			return jQ(this).data(found);
-		}).each(handler).data(found, true);
+    // Source: https://gist.github.com/buu700/4200601
+    jQ.fn.waitUntilExists = function (handler, shouldRunHandlerOnce, isChild) {
+        var found = 'found';
+        var jQthis = jQ(this.selector);
+        var jQelements = jQthis.not(function () {
+            return jQ(this).data(found);
+        }).each(handler).data(found, true);
 
-		if (!isChild) {
-			(window.waitUntilExists_Intervals = window.waitUntilExists_Intervals || {})[this.selector] =
-				window.setInterval(function () {
-					jQthis.waitUntilExists(handler, shouldRunHandlerOnce, true);
-				}, 500);
-		} else if (shouldRunHandlerOnce && jQelements.length) {
-			window.clearInterval(window.waitUntilExists_Intervals[this.selector]);
-		}
+        if (!isChild) {
+            (window.waitUntilExists_Intervals = window.waitUntilExists_Intervals || {})[this.selector] =
+                window.setInterval(function () {
+                    jQthis.waitUntilExists(handler, shouldRunHandlerOnce, true);
+                }, 500);
+        } else if (shouldRunHandlerOnce && jQelements.length) {
+            window.clearInterval(window.waitUntilExists_Intervals[this.selector]);
+        }
 
-		return jQthis;
-	}
-	
-	jQ('ul.watch-extras-section').waitUntilExists(function() {
-		if (jQ('#xyt-keyword-li').length == 0) {
-			jQ('<li/>', {
-				id: 'xyt-keyword-li'
-			}).appendTo('ul.watch-extras-section');
-			
-			jQ('<h4/>', {
-				id: 'xyt-keyword-h4',
-				class: 'title',
-				text: 'Keywords'
-			}).appendTo('#xyt-keyword-li');
-			
-			jQ('<div/>', {
-				id: 'xyt-keyword-div',
-				class: 'content'
-			}).appendTo('#xyt-keyword-li');
-			
-			var page = jQ("html").html();
-			var idx1 = page.indexOf("ytplayer.config");
-			var idx2 = page.indexOf("{", idx1);
-			var idx3 = page.indexOf("};", idx2)+1;
-			var json = page.substring(idx2, idx3);
-			var jsonObj = jQ.parseJSON(json);
-			var keywords = jsonObj.args.keywords;
-			
-			// Fall back to previous method
-			if (typeof(keywords) == "undefined" || keywords == null) {
-				var keywords = jQ('meta[name=keywords]').attr('content');
-			} else {
-				keywords = keywords.replace(/,/g, ", ");
-			}
-			jQ('<p/>', {
-				id: 'xyt-keyword-p',
-				text: keywords
-			}).appendTo('#xyt-keyword-div');
-		}
-	});
+        return jQthis;
+    }
+    
+    jQ('ul.watch-extras-section').waitUntilExists(function() {
+        if (jQ('#xyt-keyword-li').length == 0) {
+            jQ('<li/>', {
+                id: 'xyt-keyword-li'
+            }).appendTo('ul.watch-extras-section');
+            
+            jQ('<h4/>', {
+                id: 'xyt-keyword-h4',
+                class: 'title',
+                text: 'Keywords'
+            }).appendTo('#xyt-keyword-li');
+            
+            jQ('<div/>', {
+                id: 'xyt-keyword-div',
+                class: 'content'
+            }).appendTo('#xyt-keyword-li');
+            
+            var page = jQ("html").html();
+            var idx1 = page.indexOf("ytplayer.config");
+            var idx2 = page.indexOf("{", idx1);
+            var idx3 = page.indexOf("};", idx2)+1;
+            var json = page.substring(idx2, idx3);
+            var jsonObj = jQ.parseJSON(json);
+            var keywords = jsonObj.args.keywords;
+            
+            // Fall back to previous method
+            if (typeof(keywords) == "undefined" || keywords == null) {
+                var keywords = jQ('meta[name=keywords]').attr('content');
+            } else {
+                keywords = keywords.replace(/,/g, ", ");
+            }
+            jQ('<p/>', {
+                id: 'xyt-keyword-p',
+                text: keywords
+            }).appendTo('#xyt-keyword-div');
+        }
+    });
 }
 
 // Load jQuery and execute the main function

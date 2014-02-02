@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           AfterDawn download wrapper remover
-// @version        0.5
+// @version        0.5.1
 // @author         Bruno Barbieri
 // @description    Rewrites the download link to remove the download wrapper in AfterDawn (i.e. "Safe Download" button)
 // @include        http://afterdawn.*/*
@@ -29,7 +29,7 @@
 
 function main() {
     // Remove extra text from button (e.g. "Safe Download")
-    downBtn = document.querySelectorAll('#download-main-button')[0];
+    downBtn = document.getElementById('download-main-button');
     safeDownHtml = document.querySelectorAll('#download-main-button > b')[0].innerHTML;
     downBtnHtml = downBtn.innerHTML.replace('<b>' + safeDownHtml + '</b>', '');
     downBtn.innerHTML = downBtnHtml;

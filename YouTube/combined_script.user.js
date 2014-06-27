@@ -118,10 +118,12 @@ function main() {
 
     /* Hide related videos & expand comments - Start */
 
-    jQ('.watch-sidebar').remove();
-    jQ('.watch-content').width('100%');
-    jQ('#action-panel-details').width('96%');
-    jQ('#watch-description-clip').width('100%');
+    if (!jQ('.playlist-header').length) { // Don't hide playlist controls
+        jQ('.watch-sidebar').remove();
+        jQ('.watch-content').width('100%');
+        jQ('#action-panel-details').width('96%');
+        jQ('#watch-description-clip').width('100%');
+    }
 
     /* Hide related videos & expand comments - End */
 }

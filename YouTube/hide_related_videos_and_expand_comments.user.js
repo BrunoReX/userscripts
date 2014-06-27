@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          YouTube - Hide related videos & expand comments
-// @version       1.0
+// @version       1.1
 // @author        Bruno Barbieri
 // @description   Hides related videos and expand comment section
 // @include       http://*.youtube.com/*watch*

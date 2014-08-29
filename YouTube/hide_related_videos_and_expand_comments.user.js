@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          YouTube - Hide related videos & expand comments
-// @version       1.1
+// @version       1.1.1
 // @author        Bruno Barbieri
 // @description   Hides related videos and expand comment section
 // @include       http://*.youtube.com/*watch*
@@ -28,7 +28,7 @@ function main() {
     if (!jQ('.playlist-header').length) { // Don't hide playlist controls
         jQ('.watch-sidebar').remove();
         jQ('.watch-content').width('100%');
-        jQ('#action-panel-details').width('96%');
+        jQ('#action-panel-details').width('100%');
         jQ('#watch-description-clip').width('100%');
     }
 }

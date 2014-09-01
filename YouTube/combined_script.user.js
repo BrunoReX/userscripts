@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          YouTube - Combined Script
-// @version       1.0.3
+// @version       1.0.4
 // @author        Bruno Barbieri
 // @description   Combines "Add 'Stop Download' Button (YouTube Center add-on)", "Restore Keywords" and "Hide related videos & expand comments" into a single script
 // @include       http://*.youtube.com/*watch*
@@ -46,7 +46,7 @@ function main() {
     }
     
     /* Add 'Stop Download' Button (YouTube Center add-on) - Start */
-    jQ('#watch7-ytcenter-buttons').waitUntilExists(function() {
+    jQ('#watch8-ytcenter-buttons').waitUntilExists(function() {
         if (jQ('#stop-download-btn').length == 0) {
             jQ('<button/>', {
                 id: 'stop-download-btn',
@@ -66,7 +66,7 @@ function main() {
                         this.stopVideo();
                     });
                 }
-            }).appendTo('#watch7-ytcenter-buttons');
+            }).appendTo('#watch8-ytcenter-buttons');
             
             jQ('<span/>', {
                 class: 'yt-uix-button-content',

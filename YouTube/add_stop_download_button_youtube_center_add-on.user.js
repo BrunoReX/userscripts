@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          YouTube - Add 'Stop Download' Button (YouTube Center add-on)
 // @description   Adds button to stop the video download in YouTube next to the other YouTube Center buttons.
-// @version       1.0
+// @version       1.0.1
 // @author        Bruno Barbieri
 // @include       http://*.youtube.com/*watch*
 // @include       http://youtube.com/*watch*
@@ -52,7 +52,7 @@ function main() {
         return jQthis;
     }
         
-    jQ('#watch7-ytcenter-buttons').waitUntilExists(function() {
+    jQ('#watch8-ytcenter-buttons').waitUntilExists(function() {
         if (jQ('#stop-download-btn').length == 0) {
             jQ('<button/>', {
                 id: 'stop-download-btn',
@@ -72,7 +72,7 @@ function main() {
                         this.stopVideo();
                     });
                 }
-            }).appendTo('#watch7-ytcenter-buttons');
+            }).appendTo('#watch8-ytcenter-buttons');
             
             jQ('<span/>', {
                 class: 'yt-uix-button-content',

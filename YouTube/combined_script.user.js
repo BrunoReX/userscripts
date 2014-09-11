@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          YouTube - Combined Script
-// @version       1.0.4
+// @version       1.0.5
 // @author        Bruno Barbieri
 // @description   Combines "Add 'Stop Download' Button (YouTube Center add-on)", "Restore Keywords" and "Hide related videos & expand comments" into a single script
 // @include       http://*.youtube.com/*watch*
@@ -76,46 +76,6 @@ function main() {
     });
     /* Add 'Stop Download' Button (YouTube Center add-on) - End */
     
-    /* Restore Keywords - Start */
-    jQ('ul.watch-extras-section').waitUntilExists(function() {
-        if (jQ('#xyt-keyword-li').length == 0) {
-            jQ('<li/>', {
-                id: 'xyt-keyword-li'
-            }).appendTo('ul.watch-extras-section');
-            
-            jQ('<h4/>', {
-                id: 'xyt-keyword-h4',
-                class: 'title',
-                text: 'Keywords'
-            }).appendTo('#xyt-keyword-li');
-            
-            jQ('<div/>', {
-                id: 'xyt-keyword-div',
-                class: 'content'
-            }).appendTo('#xyt-keyword-li');
-            
-            var page = jQ("html").html();
-            var idx1 = page.indexOf("ytplayer.config");
-            var idx2 = page.indexOf("{", idx1);
-            var idx3 = page.indexOf("};", idx2)+1;
-            var json = page.substring(idx2, idx3);
-            var jsonObj = jQ.parseJSON(json);
-            var keywords = jsonObj.args.keywords;
-            
-            // Fall back to previous method
-            if (typeof(keywords) == "undefined" || keywords == null) {
-                var keywords = jQ('meta[name=keywords]').attr('content');
-            } else {
-                keywords = keywords.replace(/,/g, ", ");
-            }
-            jQ('<p/>', {
-                id: 'xyt-keyword-p',
-                text: keywords
-            }).appendTo('#xyt-keyword-div');
-        }
-    });
-    /* Restore Keywords - End */
-
     /* Hide related videos & expand comments - Start */
 
     if (!jQ('.playlist-header').length) { // Don't hide playlist controls

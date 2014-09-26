@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name          YouTube - Add 'Stop Download' Button (YouTube Center add-on)
 // @description   Adds button to stop the video download in YouTube next to the other YouTube Center buttons.
-// @version       1.0.1
+// @version       1.0.2
 // @author        Bruno Barbieri
 // @include       http://*.youtube.com/*watch*
 // @include       http://youtube.com/*watch*
 // @include       https://*.youtube.com/*watch*
 // @include       https://youtube.com/*watch*
-// @namespace     http://userscripts.org/scripts/show/182641
-// @updateURL     http://userscripts.org/scripts/source/182641.meta.js
-// @downloadURL   http://userscripts.org/scripts/source/182641.user.js
+// @namespace     https://github.com/BrunoReX/userscripts
+// @updateURL     https://raw.github.com/BrunoReX/userscripts/master/YouTube/add_stop_download_button_youtube_center_add-on.user.js
+// @downloadURL   https://raw.github.com/BrunoReX/userscripts/master/YouTube/add_stop_download_button_youtube_center_add-on.user.js
 // ==/UserScript==
 
 /*

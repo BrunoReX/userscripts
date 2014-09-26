@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           AfterDawn download wrapper remover
-// @version        0.5.1
+// @version        0.5.2
 // @author         Bruno Barbieri
 // @description    Rewrites the download link to remove the download wrapper in AfterDawn (i.e. "Safe Download" button)
 // @include        http://afterdawn.*/*
@@ -9,9 +9,9 @@
 // @include        http://download.fi/*
 // @include        http://*.download.fi/*
 // @include        http://www.*.download.fi/*
-// @namespace      http://userscripts.org/scripts/show/161313
-// @updateURL      http://userscripts.org/scripts/source/161313.meta.js
-// @downloadURL    http://userscripts.org/scripts/source/161313.user.js
+// @namespace      https://github.com/BrunoReX/userscripts
+// @updateURL      https://raw.github.com/BrunoReX/userscripts/master/AfterDawn/afterdawn_download_wrapper_remover.user.js
+// @downloadURL    https://raw.github.com/BrunoReX/userscripts/master/AfterDawn/afterdawn_download_wrapper_remover.user.js
 // ==/UserScript==
 
 /*

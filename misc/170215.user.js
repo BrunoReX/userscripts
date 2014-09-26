@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name           Portal do aluno FIO - Selecionar primeira opção
-// @version        1.3
+// @version        1.3.1
 // @author         Bruno Barbieri
 // @description    Seleciona a primeira opção no portal do aluno da FIO automaticamente
 // @include        http://*/erptnt/ACTPortalAluIES
-// @namespace      http://userscripts.org/scripts/show/170215
-// @updateURL      http://userscripts.org/scripts/source/170215.meta.js
-// @downloadURL    http://userscripts.org/scripts/source/170215.user.js
+// @namespace      https://github.com/BrunoReX/userscripts
+// @updateURL      https://raw.github.com/BrunoReX/userscripts/master/misc/170215.user.js
+// @downloadURL    https://raw.github.com/BrunoReX/userscripts/master/misc/170215.user.js
 // ==/UserScript==
  
 function addJQuery(callback) {

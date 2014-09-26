@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name          YouTube - Restore Keywords
 // @description   Restore keyword list in YouTube videos
-// @version       1.2
+// @version       1.2.1
 // @author        Bruno Barbieri
 // @include       http://*.youtube.com/*watch*
 // @include       http://youtube.com/*watch*
 // @include       https://*.youtube.com/*watch*
 // @include       https://youtube.com/*watch*
-// @namespace     http://userscripts.org/scripts/show/176690
-// @updateURL     http://userscripts.org/scripts/source/176690.meta.js
-// @downloadURL   http://userscripts.org/scripts/source/176690.user.js
+// @namespace     https://github.com/BrunoReX/userscripts
+// @updateURL     https://raw.github.com/BrunoReX/userscripts/master/YouTube/restore_keywords.user.js
+// @downloadURL   https://raw.github.com/BrunoReX/userscripts/master/YouTube/restore_keywords.user.js
 // ==/UserScript==
 
 

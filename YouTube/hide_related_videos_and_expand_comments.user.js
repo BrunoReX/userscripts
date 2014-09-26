@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name          YouTube - Hide related videos & expand comments
-// @version       1.1.1
+// @version       1.1.2
 // @author        Bruno Barbieri
 // @description   Hides related videos and expand comment section
 // @include       http://*.youtube.com/*watch*
 // @include       http://youtube.com/*watch*
 // @include       https://*.youtube.com/*watch*
 // @include       https://youtube.com/*watch*
-// @namespace     http://userscripts.org/scripts/show/182642
-// @updateURL     http://userscripts.org/scripts/source/182642.meta.js
-// @downloadURL   http://userscripts.org/scripts/source/182642.user.js
+// @namespace     https://github.com/BrunoReX/userscripts
+// @updateURL     https://raw.github.com/BrunoReX/userscripts/master/YouTube/hide_related_videos_and_expand_comments.user.js
+// @downloadURL   https://raw.github.com/BrunoReX/userscripts/master/YouTube/hide_related_videos_and_expand_comments.user.js
 // ==/UserScript==
 
 // A function that loads jQuery and calls a callback function when jQuery has finished loading

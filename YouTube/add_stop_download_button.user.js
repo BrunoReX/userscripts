@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name          YouTube - Add 'Stop Download' Button
 // @description   Adds button to stop the video download in YouTube. I made this because the one I was using stopped working.
-// @version       1.3
+// @version       1.3.1
 // @author        Bruno Barbieri
 // @include       http://*.youtube.com/*watch*
 // @include       http://youtube.com/*watch*
 // @include       https://*.youtube.com/*watch*
 // @include       https://youtube.com/*watch*
-// @namespace     http://userscripts.org/scripts/show/175162
-// @updateURL     http://userscripts.org/scripts/source/175162.meta.js
-// @downloadURL   http://userscripts.org/scripts/source/175162.user.js
+// @namespace     https://github.com/BrunoReX/userscripts
+// @updateURL     https://raw.github.com/BrunoReX/userscripts/master/YouTube/add_stop_download_button.user.js
+// @downloadURL   https://raw.github.com/BrunoReX/userscripts/master/YouTube/add_stop_download_button.user.js
 // ==/UserScript==
 
 /*

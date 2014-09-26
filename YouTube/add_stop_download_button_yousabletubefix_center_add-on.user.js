@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name          YouTube - Add 'Stop Download' Button (YousableTubeFix add-on)
 // @description   Adds button to stop the video download in YouTube next to the other YousableTubeFix buttons.
-// @version       1.3
+// @version       1.3.1
 // @author        Bruno Barbieri
 // @include       http://*.youtube.com/*watch*
 // @include       http://youtube.com/*watch*
 // @include       https://*.youtube.com/*watch*
 // @include       https://youtube.com/*watch*
-// @namespace     http://userscripts.org/scripts/show/175172
-// @updateURL     http://userscripts.org/scripts/source/175172.meta.js
-// @downloadURL   http://userscripts.org/scripts/source/175172.user.js
+// @namespace     https://github.com/BrunoReX/userscripts
+// @updateURL     https://raw.github.com/BrunoReX/userscripts/master/YouTube/add_stop_download_button_yousabletubefix_center_add-on.user.js
+// @downloadURL   https://raw.github.com/BrunoReX/userscripts/master/YouTube/add_stop_download_button_yousabletubefix_center_add-on.user.js
 // ==/UserScript==
 
 /*
